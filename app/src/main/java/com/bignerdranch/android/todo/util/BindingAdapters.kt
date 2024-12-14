@@ -8,17 +8,17 @@ import java.text.DateFormat
 @BindingAdapter("setPriority")
 fun setPriority(view: TextView, priority: Int){
     when(priority){
-        0 -> {
-            view.text = "1"
-            view.setTextColor(Color.rgb(55,125,100))
-        }
         1 -> {
-            view.text = "2"
-            view.setTextColor(Color.rgb(129,210,100))
+            view.text = "1"
+            view.setTextColor(Color.rgb(0,55,125))
         }
         2 -> {
+            view.text = "2"
+            view.setTextColor(Color.rgb(0,129,210))
+        }
+        3 -> {
             view.text = "3"
-            view.setTextColor(Color.rgb(195,210,100))
+            view.setTextColor(Color.rgb(0,195,210))
         }
     }
 }

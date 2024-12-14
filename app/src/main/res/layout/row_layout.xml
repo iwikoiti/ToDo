@@ -32,19 +32,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Title"
                 android:text="@{task.title}"/>
+
             <TextView
                 android:id="@+id/taskPriority"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="16dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="High"
-                app:setPriority = "@{task.priority}"
-                />
+                app:setPriority="@{task.priority}"
+                tools:text="High" />
             <TextView
                 android:id="@+id/taskTimestamp"
                 android:layout_width="0dp"
