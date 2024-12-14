@@ -14,8 +14,7 @@ lifecycleLiveData = "2.8.7"
 navigation = "2.8.5"
 coroutines = "1.7.3"
 bindings = "8.7.3"
-
-
+ksp = "2.1.0-1.0.29"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,5 +45,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 
