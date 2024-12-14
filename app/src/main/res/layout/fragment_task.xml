@@ -13,6 +13,7 @@
         android:paddingHorizontal="10dp"
         android:paddingTop="100dp"
         android:paddingBottom="50dp"
+        tools:listitem="@layout/row_layout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
