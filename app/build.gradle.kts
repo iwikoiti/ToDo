@@ -58,7 +58,8 @@ dependencies {
     implementation(libs.androidx.navigation.ui)
 
     implementation(libs.androidx.room.runtime)
-    kapt(libs.androidx.room.compiler)
+    annotationProcessor(libs.androidx.room.compiler)
+    //kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room)
 
     implementation(libs.androidx.databinding)
