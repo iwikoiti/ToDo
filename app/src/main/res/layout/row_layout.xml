@@ -8,13 +8,20 @@
             name="task"
             type="com.bignerdranch.android.todo.database.Task"
             />
+
+        <variable
+            name="clickListener"
+            type="com.bignerdranch.android.todo.ui.task.TaskClickListener"
+            />
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="4dp">
+        app:cardElevation="4dp"
+        android:onClick="@{() -> clickListener.onClick(task)}">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/row_background"
             android:layout_width="match_parent"

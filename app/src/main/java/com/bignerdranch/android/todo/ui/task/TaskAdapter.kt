@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bignerdranch.android.todo.databinding.RowLayoutBinding
 import com.bignerdranch.android.todo.database.Task
 
-class TaskAdapter: ListAdapter<Task, TaskAdapter.ViewHolder>(TaskDiffCallback) {
+class TaskAdapter(val clickListener: TaskClickListener): ListAdapter<Task, TaskAdapter.ViewHolder>(TaskDiffCallback) {
 
     companion object TaskDiffCallback: DiffUtil.ItemCallback<Task>() {
         override fun areItemsTheSame(oldItem: Task, newItem: Task) = oldItem.id == newItem.id
@@ -16,8 +16,9 @@ class TaskAdapter: ListAdapter<Task, TaskAdapter.ViewHolder>(TaskDiffCallback) {
     }
 
     class ViewHolder(val binding: RowLayoutBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(task: Task){
+        fun bind(task: Task, clickListener: TaskClickListener){
             binding.task = task
+            binding.clickListener = clickListener
             binding.executePendingBindings()
         }
     }
@@ -28,6 +29,10 @@ class TaskAdapter: ListAdapter<Task, TaskAdapter.ViewHolder>(TaskDiffCallback) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val current = getItem(position)
-        holder.bind(current)
+        holder.bind(current, clickListener)
     }
+}
+
+class TaskClickListener(val clickListener: (task: Task) -> Unit){
+    fun onClick(task: Task) = clickListener(task)
 }
