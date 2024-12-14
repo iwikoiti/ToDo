@@ -10,15 +10,15 @@ fun setPriority(view: TextView, priority: Int){
     when(priority){
         1 -> {
             view.text = "1"
-            view.setTextColor(Color.rgb(0,55,125))
+            view.setTextColor(Color.rgb(197,29,52))
         }
         2 -> {
             view.text = "2"
-            view.setTextColor(Color.rgb(0,129,210))
+            view.setTextColor(Color.rgb(255,191,0))
         }
         3 -> {
             view.text = "3"
-            view.setTextColor(Color.rgb(0,195,210))
+            view.setTextColor(Color.rgb(0,125,52))
         }
     }
 }
