@@ -6,6 +6,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="100dp"
+        android:paddingBottom="50dp"
         tools:context="com.bignerdranch.android.todoapplication.ui.add.AddFragment">
         <EditText
             android:id="@+id/edit_task"
