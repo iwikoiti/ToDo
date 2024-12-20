@@ -10,8 +10,23 @@
         android:paddingTop="100dp"
         android:paddingBottom="50dp"
         tools:context="com.bignerdranch.android.todoapplication.ui.add.AddFragment">
+
         <EditText
             android:id="@+id/edit_task"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Name your task..."
+            android:inputType="text"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edit_desc"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -20,9 +35,8 @@
             android:inputType="text"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_task" />
 
         <RadioGroup
             android:id="@+id/radio_priority"
@@ -33,7 +47,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_task">
+            app:layout_constraintTop_toBottomOf="@+id/edit_desc">
 
             <RadioButton
                 android:id="@+id/btn_high"

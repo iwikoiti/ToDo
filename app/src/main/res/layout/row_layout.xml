@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        app:cardCornerRadius="8dp"
+
         app:cardElevation="4dp"
         android:onClick="@{() -> clickListener.onClick(task)}">
 
@@ -26,6 +26,7 @@
             android:id="@+id/row_background"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/taskTitle"
                 android:layout_width="0dp"
@@ -33,12 +34,32 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
+                android:text="@{task.title}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintEnd_toStartOf="@+id/taskPriority"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Title"
-                android:text="@{task.title}"/>
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/taskDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@{task.description}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/taskTimestamp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/taskTitle"
+                app:layout_constraintVertical_bias="0.254"
+                tools:text="Description" />
 
             <TextView
                 android:id="@+id/taskPriority"
@@ -52,21 +73,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:setPriority="@{task.priority}"
                 tools:text="High" />
+
             <TextView
                 android:id="@+id/taskTimestamp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/taskPriority"
-                app:layout_constraintVertical_bias="0.0"
-                tools:text="timestamp"
-                app:setTimestamp = "@{task.timestamp}"/>
+                app:setTimestamp="@{task.timestamp}"
+                tools:text="timestamp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>

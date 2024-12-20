@@ -31,6 +31,7 @@ class AddFragment : Fragment() {
                     return@setOnClickListener
                 }
                 val title_str = editTask.text.toString()
+                val desc_str = editDesc.text.toString()
                 // Получаем выбранный приоритет из RadioGroup
                 val selectedPriority = when (radioPriority.checkedRadioButtonId) {
                     R.id.btn_high -> 1
@@ -43,6 +44,7 @@ class AddFragment : Fragment() {
                     id = 0,
                     title = title_str,
                     priority = selectedPriority,
+                    description = desc_str,
                     timestamp = System.currentTimeMillis()
                 )
                 // Сохраняем задачу

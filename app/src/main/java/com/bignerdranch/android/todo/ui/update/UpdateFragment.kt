@@ -28,7 +28,9 @@ class UpdateFragment : Fragment() {
 
         binding.apply {
             updateEditTask.setText(args.task.title)
+            updateEditDesc.setText(args.task.description)
             var priority = args.task.priority
+
 
             when(priority){
                 1 -> updateRadioPriority.check(R.id.update_btn_high)
@@ -44,6 +46,7 @@ class UpdateFragment : Fragment() {
                 }
 
                 val task_str = updateEditTask.text.toString()
+                val desc_str = updateEditDesc.text.toString()
                 val selectedPriority = when (updateRadioPriority.checkedRadioButtonId) {
                     R.id.update_btn_high -> 1
                     R.id.update_btn_medium -> 2
@@ -54,6 +57,7 @@ class UpdateFragment : Fragment() {
                 val task = Task(
                     args.task.id,
                     task_str,
+                    desc_str,
                     selectedPriority,
                     args.task.timestamp
                 )
